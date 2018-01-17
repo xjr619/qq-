@@ -1,0 +1,189 @@
+/* 背景部分 */
+.banner_box{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  transition: transform 1s;
+}
+/* 不是第一屏背景倾斜 */
+.banner_box_rotate{
+  transform: rotate(-15deg);
+}
+.banner_box>div{
+  position: absolute;
+  transition: all 1s;
+  background-image: linear-gradient(to right,#ccc,#fff);
+  animation: circle_aniate 20s linear infinite;
+}
+.circle1{
+  width: 50px;
+  height: 25px;
+  border-radius: 25px 25px 0 0;
+  left: 40%;
+  top: 20%;
+}
+.circle2{
+  width: 100px;
+  height: 50px;
+  left: 60%;
+  top: 20%;
+  border-radius: 50px 50px 0 0;
+}
+.circle3{
+  width: 120px;
+  height: 60px;
+  left: 62%;
+  top: 22%;
+  border-radius: 60px 60px 0 0;
+}
+.circle4{
+  width: 140px;
+  height: 70px;
+  left: 10%;
+  top: 40%;
+  border-radius: 70px 70px 0 0;
+}
+.circle5{
+  width: 160px;
+  height: 80px;
+  left: 16%;
+  top: 47%;
+  border-radius: 80px 80px 0 0;
+}
+.circle6{
+  width: 200px;
+  height: 100px;
+  left: 50%;
+  top: 47%;
+  border-radius: 100px 100px 0 0;
+}
+/* 圆动画 */
+@keyframes circle_aniate{
+  0%{
+
+  }
+  100%{
+    transform: translateX(-1000px)
+  }
+}
+/* 第一屏 */
+.s1{
+  position: relative;
+  perspective: 1000px;
+}
+.s1_wrap{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: transform 1s;
+  transform: translate(-50%,-50%);
+}
+.s1_skin{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* 开始的时候的状态 注意属性换位置效果也会变化*/
+.s1_wrap_beigin{
+  transform: translate3d(-50%,-50%,800px) rotateY(180deg);
+}
+/* 第一屏 */
+/* 第二屏 */
+.s2{
+  position: relative;
+  perspective: 1000px;
+}
+.s2_wrap>img{
+  display: block;
+}
+.s2_wrap{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  transition: transform 1s;
+}
+.s2_wrap_begin{
+  transform: translate3d(-50%,-50%,-10000px);
+}
+.s2_wrap_leave{
+  transform: translate3d(-50%,-50%,1000px);
+}
+/* 第二屏 */
+/* 第三屏 */
+.s3{
+  perspective: 1000px;
+  position: relative;
+}
+.s3_wrap{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 30%;
+  top: 30%;
+  transform: rotateX(40deg);
+  transition: all 1s;
+}
+.s3_close_wrap{
+  height: 100%;
+  width: 100%;
+  border:1px solid #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1s;
+}
+.s3_word{
+  position: absolute;
+  left: -326px;
+  top: 138px;
+  transition: all 1s;
+}
+/* 初始位置 */
+.s3_wrap_begin{
+  left: 30%;
+  top: 30%;
+  transform: translateY(2000px) rotateX(40deg);
+}
+.s3_wrap_begin .s3_close_wrap{
+  transform: translateX(2000px);
+}
+.s3_wrap_begin .s3_word{
+  transform: translateX(-2000px);
+}
+/* 第三屏 */
+/* 第四屏 */
+.s4_wrap{
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  transition: left 1s,top 1s,transform 1s;
+}
+.s4_img1,.s4_img3{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.s4_img4{
+  position: absolute;
+  right: 0;
+}
+.s4_img5{
+  position: absolute;
+  bottom: 0;
+}
+.s4_img2{
+  position: absolute;
+  left: 0;
+  bottom: 104px;
+}
+/* 开始位置 */
+.s4_wrap_begin{
+  left: -27px;
+  top: 147px;
+  transform: translate(-50%,-50%) rotate(30deg);
+}
+/* 第四屏 */
